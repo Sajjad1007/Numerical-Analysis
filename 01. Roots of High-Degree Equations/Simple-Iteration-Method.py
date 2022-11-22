@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[57]:
-
-
 from math import sqrt
 
 print("The given equation, 2x^2 - 5x + 3 = 0")
@@ -36,4 +30,3 @@ print("Number of iterations :", i+1)
         
 print("\nx2 = %0.5f" %x2)
 print("Number of iterations :", j+1)
-
