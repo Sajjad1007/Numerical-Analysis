@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[5]:
-
-
 def f(x):
     y = x**2 - 4*x - 5
     return y
@@ -48,4 +42,3 @@ Maximum iterations : 10
 
 The root = 5.00000 (5 iterations)
 """
-
