@@ -3,14 +3,14 @@ def least_square(x, y, n):
     sum_x_square = 0
     
     for i in range(n):
-        sum_xy += x[i] * y[i]
+        sum_xy += x[i]*y[i]
         sum_x += x[i]
         sum_y += y[i]
-        sum_x_square += x[i] ** 2
+        sum_x_square += x[i]**2
         
-    a1 = (n * sum_xy - sum_x * sum_y) / (n * sum_x_square - sum_x ** 2)
-    a0 = (sum_y - a1 * sum_x) / n
-    print("The linear regression model : y = %fx" %a1, "+ %f" %a0)
+    a1 = (n*sum_xy - sum_x*sum_y)/(n*sum_x_square - sum_x**2)
+    a0 = (sum_y - a1*sum_x)/n
+    print("\nThe linear regression model : y = %fx" %a1, "+ %f" %a0)
     return
     
 

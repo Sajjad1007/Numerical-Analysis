@@ -1,7 +1,7 @@
 # Quadratic interpolation of Lagrange method
 
 def L_function(t, T):
-    sum = ((t - T[1]) / (T[0] - T[1])) * ((t - T[2]) / (T[0] - T[2]))
+    sum = ((t-T[1])/(T[0]-T[1]))*((t-T[2])/(T[0]-T[2]))
     return sum
 
 
@@ -14,7 +14,7 @@ def lagrange(t):
     sum = 0
     
     for i in range(3):
-        sum += (L[i] * V[i])
+        sum += (L[i]*V[i])
     
     print("\nv(%g) =" %t, "%g" %sum)
     return
@@ -25,7 +25,7 @@ def lagrange(t):
 T = [10, 15, 20]
 V = [227.04, 362.78, 517.35]
 
-t = float(input("Enter t = "))
+t = float(input("\nEnter t = "))
 lagrange(t)
 
 

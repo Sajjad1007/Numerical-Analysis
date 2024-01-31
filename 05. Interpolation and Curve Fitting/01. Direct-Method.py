@@ -9,7 +9,7 @@ def direct(t):
     print("\nv(t) = %g" %T[0], "+ %gt" %T[1], "+ %gt^2" %T[2])
     
     for i in range(3):
-        sum += (T[i] * t ** i)
+        sum += (T[i]*(t**i))
     
     print("v(%g) =" %t, "%g" %sum)
     return
@@ -24,7 +24,7 @@ V = np.array([[227.04],
               [362.78],
               [517.35]])
 
-t = float(input("Enter t = "))
+t = float(input("\nEnter t = "))
 direct(t)
 
 

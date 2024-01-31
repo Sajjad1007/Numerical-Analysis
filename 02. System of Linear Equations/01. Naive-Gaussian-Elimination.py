@@ -3,34 +3,34 @@
 def forward_elimination(A, b, n):
     det = 1
     
-    for k in range(n - 1):
-        for i in range((k + 1), n):
+    for k in range(n-1):
+        for i in range((k+1), n):
             if A[k][k] == 0:
                 return False, 0
                 
-            c = A[i][k] / A[k][k]
-            b[i] = b[i] - c * b[k]
+            c = A[i][k]/A[k][k]
+            b[i] = b[i] - c*b[k]
             
             for j in range(k, n):
-                A[i][j] = A[i][j] - c * A[k][j]
+                A[i][j] = A[i][j] - c*A[k][j]
                 
-        det = det * A[k][k]
+        det = det*A[k][k]
     
-    det = det * A[k + 1][k + 1]
+    det = det*A[k+1][k+1]
     return True, det
     
 
 def back_substitution(A, b, n):
     x = []
-    x.append(b[n - 1] / A[n - 1][n - 1])
+    x.append(b[n-1]/A[n-1][n-1])
     
-    for i in range((n - 2), -1, -1):
+    for i in range((n-2), -1, -1):
         sum = 0
         
-        for j in range((i + 1), n):
-            sum += A[i][j] * x[(n - 1) - j]
+        for j in range((i+1), n):
+            sum += A[i][j]*x[(n-1)-j]
             
-        b[i] = (b[i] - sum) / A[i][i]
+        b[i] = (b[i]-sum)/A[i][i]
         x.append(b[i])
     
     x.reverse()
@@ -58,7 +58,7 @@ b = [106.8, 177.2, 279.2]
 n = 3
     
 flag, det = forward_elimination(A, b, n)
-print("The augmented matrix after forward elimination :\n")
+print("\nThe augmented matrix after forward elimination :\n")
 print_equations(A, b, n)
 
 if flag == True:

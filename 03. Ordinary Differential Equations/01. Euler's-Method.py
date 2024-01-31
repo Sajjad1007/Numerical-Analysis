@@ -1,5 +1,5 @@
 def df(x, y):
-    y1 = -2.2067 * (10 ** -12) * (y ** 4 - 81 * (10 ** 8))
+    y1 = -2.2067*(10**-12)*(y**4 - 81*(10**8))
     return y1
 
 
@@ -9,11 +9,11 @@ def euler(xn, h):
     y_true = 647.57
     
     while x < xn:
-        y_new = y + h * df(x, y)
+        y_new = y + h*df(x, y)
         x += h
         y = y_new
     
-    error = 100 * abs((y_true - y) / y_true)
+    error = 100*abs((y_true-y)/y_true)
     print("\nf(%d) =" %x, y)
     print("Error = %0.5f%%" %error)
     return
@@ -21,7 +21,7 @@ def euler(xn, h):
 
 # Main code starts from here
     
-xn = int(input("Enter x = "))
+xn = int(input("\nEnter x = "))
 h = float(input("Enter step size = "))
 euler(xn, h)
 
